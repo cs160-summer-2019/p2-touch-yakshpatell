@@ -85,6 +85,55 @@
 	</div>
 	<script>
 	  // your solution here
+
+   	var B1 = document.getElementById("rotate-box");
+    var A = new Hammer.Manager(B1);
+    var rotate = new Hammer.Rotate();
+    A.add(rotate);
+    A.on("rotate", function(action) {
+      B1.textContent = action.type + " yes";
+    });
+    
+    var B2 = document.getElementById("pinch-box");
+    var B = new Hammer.Manager(B2);
+    var pinch = new Hammer.Pinch();
+    B.add(pinch);
+    B.on("pinch", function(action) {
+      B2.textContent = action.type + " yes";
+    });
+    
+    var B3 = document.getElementById("press-box");
+    var C = new Hammer.Manager(B3);
+    var press = new Hammer.Press();
+    C.add(press);
+    C.on("press", function(action) {
+      B3.textContent = action.type + " yes";
+    });
+   
+    var B4 = document.getElementById("pan-box");
+    var D = new Hammer.Manager(B4);
+    var pan = new Hammer.Pan();
+    D.add(pan);
+    D.on("pan", function(action) {
+      B4.textContent = action.type + " yes";
+    });
+   
+    var B5 = document.getElementById("tap-box");
+    var E = new Hammer.Manager(B5);
+    var tap = new Hammer.Tap();
+    E.add(tap);
+     E.on("tap", function(action) {
+      B5.textContent = action.type + " yes";
+    });
+    
+    var B6 = document.getElementById("swipe-box");
+    var F = new Hammer.Manager(B6);
+    var swipe = new Hammer.Swipe();
+    F.add(swipe);
+    F.on("swipe", function(action) {
+      B6.textContent = action.type + " yes";
+    });
+
   </script>
 </body>
 </html>
